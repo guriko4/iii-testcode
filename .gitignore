@@ -1,0 +1,19 @@
+# システムファイル
+.DS_Store
+Thumbs.db
+
+# エディタ系
+.vscode/
+.idea/
+
+# node系
+node_modules/
+
+# ビルド成果物
+dist/
+
+# ログ
+*.log
+
+# 秘密ファイル
+.env
