@@ -15,11 +15,43 @@ body {
     overflow: hidden;
     aspect-ratio: 1024 / 579;
 
-    img {
+    img,
+    .woman-group,
+    .man-group {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: auto;
     }
+
+    .woman-group,
+    .man-group,
+    #document,
+    #sm-document,
+    #pc-document {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+    }
 }
+
+#left-comment {
+    transform-origin: 41% 33%;
+    scale: 0;
+    opacity: 0;
+}
+
+#arrow {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+#img-icon {
+    transform-origin: 51% 46%;
+    transform: translateX(-200px);
+    // scale: 0;
+}
+
+// #woman-arm {
+//     outline: 1px dashed pink;
+//     transform-origin: 65% 95%;
+// }
