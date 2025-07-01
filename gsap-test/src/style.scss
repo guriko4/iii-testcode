@@ -1,0 +1,25 @@
+body {
+    background-color: #eeeeee;
+}
+
+.stage-wrapper {
+    width: 1200px;
+    margin: 100px auto 0 auto;
+    background-color: #ffffff;
+}
+
+.stage {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1024 / 579;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+}
