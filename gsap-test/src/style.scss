@@ -3,9 +3,9 @@ body {
 }
 
 .stage-wrapper {
-    width: 1200px;
-    margin: 100px auto 0 auto;
-    background-color: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto;
 }
 
 .stage1 {
@@ -14,6 +14,7 @@ body {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1024 / 579;
+    background-color: #ffffff;
 
     img,
     .woman-group,
