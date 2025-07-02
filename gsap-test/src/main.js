@@ -7,14 +7,14 @@ gsap.registerPlugin(ScrollTrigger);
 // 対象のステージを読み込み
 const stage1 = document.querySelector('.stage1');
 
-// gsap.set('#arrow', {
-//   x: -200,
-//   opacity: 0
-// });
+// GSAPタイムライン用グローバル変数
+let tl = null;
 
 // クラスstage1の挙動
 function animationStage1(forward = true) {
-  const tl = gsap.timeline({ defaults: { duration: 0.5 } });
+  // 以前のアニメが残ってるかもなので、いったん消す
+  if (tl) tl.kill();
+  tl = gsap.timeline({ defaults: { duration: 0.5 } });
 
   if (forward) {
 
