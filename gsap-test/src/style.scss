@@ -8,7 +8,7 @@ body {
     background-color: #ffffff;
 }
 
-.stage {
+.stage1 {
     width: 100%;
     max-width: 1200px;
     position: relative;
@@ -32,12 +32,21 @@ body {
     #pc-document {
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
     }
+
+}
+
+#left-comment,
+#right-comment {
+    scale: 0;
+    opacity: 0;
 }
 
 #left-comment {
     transform-origin: 41% 33%;
-    scale: 0;
-    opacity: 0;
+}
+
+#right-comment {
+    transform-origin: 59% 65%;
 }
 
 #arrow {
@@ -48,10 +57,8 @@ body {
 #img-icon {
     transform-origin: 51% 46%;
     transform: translateX(-200px);
-    // scale: 0;
 }
 
-// #woman-arm {
-//     outline: 1px dashed pink;
-//     transform-origin: 65% 95%;
-// }
+#pc-document {
+    opacity: 0;
+}
