@@ -7,11 +7,17 @@ gsap.registerPlugin(ScrollTrigger);
 // 対象のステージを読み込み
 const stage1 = document.querySelector('.stage1');
 
+// gsap.set('#arrow', {
+//   x: -200,
+//   opacity: 0
+// });
+
 // クラスstage1の挙動
 function animationStage1(forward = true) {
   const tl = gsap.timeline({ defaults: { duration: 0.5 } });
 
   if (forward) {
+
     tl.to('#woman-arm', {
       rotation: 24,
       transformOrigin: '31% 78%',
@@ -25,7 +31,7 @@ function animationStage1(forward = true) {
       })
       .to('#arrow', {
         opacity: 1,
-        x: -20,
+        x: 35,
         duration: 1,
         ease: "back.out(1.7)"
       })
@@ -50,35 +56,40 @@ function animationStage1(forward = true) {
         transformOrigin: '82.89% 73%',
       });
   } else {
-    tl.to('#woman-arm', { rotation: 0 })
-      .to('#left-comment', {
-        scale: 0,
-        opacity: 0,
-      })
-      .to('#arrow', {
-        opacity: 0,
-        x: 0,
-      })
-      .to('#img-icon', {
-        scale: 0,
-        x: -200,
-        duration: .6
-      })
-      .to('#right-comment', {
-        scale: 0,
-        opacity: 0,
-      })
-      .to('#pc-document', {
-        opacity: 0
-      })
-      .to('#man-arm', {
-        rotation: 0,
-      });
+    tl.to('#woman-arm', { rotation: 0 }, 0)
+      .to('#left-comment', { scale: 0, opacity: 0 }, 0)
+      .to('#arrow', { opacity: 0, x: -400 }, 0)
+      .to('#img-icon', { scale: 0, x: -200, duration: .6 }, 0)
+      .to('#right-comment', { scale: 0, opacity: 0 }, 0)
+      .to('#pc-document', { opacity: 0 }, 0)
+      .to('#man-arm', { rotation: 0, }, 0);
   }
 }
 
 // スマホまたはタブレット検出 ホバーできないand指操作のもの
-const isMobile = windou.matchMedia('(hover:none) and (pointer:coarse)').matches;
+const isMobile = window.matchMedia('(hover:none) and (pointer:coarse)').matches;
+
+// PCならホバーで再生
+if (!isMobile) {
+  stage1.addEventListener('mouseenter', () => {
+    animationStage1(true);
+  });
+  stage1.addEventListener('mouseleave', () => {
+    animationStage1(false);
+  });
+}
+
+// モバイルはスクロール表示で一度だけ再生
+if (isMobile) {
+  ScrollTrigger.create({
+    trigger: stage1,
+    start: "top 80%",
+    once: true,
+    onEnter: () => {
+      animationStage1(true);
+    }
+  });
+}
 
 // document.querySelector('.stage').addEventListener('click', () => {
 //   const tl = gsap.timeline();
