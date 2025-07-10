@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "sass:watch": "sass --watch scss/style.scss:style.css --style=compressed",
-    "sass:build": "sass scss/style.scss:style.css --style=compressed",
+    "sass:watch": "sass --watch src/style.scss:style.css --style=compressed",
+    "sass:build": "sass src/style.scss:style.css --style=compressed",
     "start": "concurrently -n VITE,SASS -c cyan,magenta \"npm:dev\" \"npm:sass:watch\""
   },
   "devDependencies": {
