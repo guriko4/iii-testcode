@@ -6,15 +6,30 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 100px auto;
+    transition: all 0.3s ease;
+    box-shadow: none;
+
+    .stage-title {
+        width: 100%;
+        height: 4.625rem;
+        background-color: #ff7800;
+        font-size: 1.875rem;
+        font-weight: bold;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-.stage1 {
+.stage {
     width: 100%;
     max-width: 1200px;
     position: relative;
     overflow: hidden;
     aspect-ratio: 1024 / 579;
     background-color: #ffffff;
+    position: relative;
 
     img,
     .woman-group,
@@ -26,40 +41,42 @@ body {
         height: auto;
     }
 
-    .woman-group,
-    .man-group,
-    #document,
-    #sm-document,
-    #pc-document {
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+    .case1 {
+
+        .woman-group,
+        .man-group,
+        #document,
+        #sm-document,
+        #pc-document {
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+        }
     }
 
-}
+    #left-comment,
+    #right-comment {
+        scale: 0;
+        opacity: 0;
+    }
 
-#left-comment,
-#right-comment {
-    scale: 0;
-    opacity: 0;
-}
+    #left-comment {
+        transform-origin: 41% 33%;
+    }
 
-#left-comment {
-    transform-origin: 41% 33%;
-}
+    #right-comment {
+        transform-origin: 59% 65%;
+    }
 
-#right-comment {
-    transform-origin: 59% 65%;
-}
+    #arrow {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
 
-#arrow {
-    transform: translateX(-400px);
-    opacity: 0;
-}
+    #img-icon {
+        transform-origin: 51% 46%;
+        transform: translateX(-200px);
+    }
 
-#img-icon {
-    transform-origin: 51% 46%;
-    transform: translateX(-200px);
-}
-
-#pc-document {
-    opacity: 0;
+    #pc-document {
+        opacity: 0;
+    }
 }
