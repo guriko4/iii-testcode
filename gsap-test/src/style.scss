@@ -27,7 +27,7 @@ body {
     max-width: 1200px;
     position: relative;
     overflow: hidden;
-    aspect-ratio: 1024 / 579;
+    aspect-ratio: 1024 / 500;
     background-color: #ffffff;
     position: relative;
 
@@ -39,17 +39,6 @@ body {
         left: 0;
         width: 100%;
         height: auto;
-    }
-
-    .case1 {
-
-        .woman-group,
-        .man-group,
-        #document,
-        #sm-document,
-        #pc-document {
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
-        }
     }
 
     #left-comment,
@@ -78,5 +67,16 @@ body {
 
     #pc-document {
         opacity: 0;
+    }
+}
+
+.case1 {
+
+    #document,
+    #pc-document,
+    #sm-document,
+    .man-group,
+    .woman-group {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
     }
 }

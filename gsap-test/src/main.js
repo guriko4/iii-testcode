@@ -33,10 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'case1':
           const tl1 = gsap.timeline();
 
+          gsap.set('#man-arm', {
+            rotation: -105,
+            transformOrigin: '79.65% 91.5%'
+          });
+
           tl1.to('#woman-arm', {
             rotation: 24,
-            transformOrigin: '31% 78%',
-            duration: 0.5
+            transformOrigin: '31.8% 93.5%',
+            duration: 0.5,
+            delay: 0.5
           })
             .to('#left-comment', {
               scale: 1,
@@ -67,8 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
               ease: "power2.out"
             })
             .to('#man-arm', {
-              rotation: 120,
-              transformOrigin: '82.89% 73%',
+              rotation: 10,
+              transformOrigin: '79.65% 92%'
             });
           break;
 
