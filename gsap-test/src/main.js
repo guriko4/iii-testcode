@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
               scale: 1,
               opacity: 1,
               duration: .4,
-              ease: "back.out(2.5)"
+              ease: "back.out(2.5)",
             })
             .to('#arrow', {
               opacity: 1,
@@ -65,7 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
               scale: 1,
               opacity: 1,
               duration: .4,
-              ease: "back.out(2.5)"
+              ease: "back.out(2.5)",
+              transformOrigin: '62.7% 77%'
             })
             .to('#pc-document', {
               opacity: 1,
